@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div th:replace = "global :: head_styles"></div>
+    <div th:replace = "global :: head_scripts"></div>
+    <title>Title</title>
+</head>
+<body>
+<div class="container mb-5">
+    <div class="row mt-5">
+        <div class="col">
+            <h1>โฟสต์ทรัพย์</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form th:object="${assetPost}" th:action="@{/asset/assetpost}" method="post">
+                <div class="form-group">
+                    <label>หัวข้อประกาศ</label>
+                    <input th:field="*{assetName}" type="text" class="form-control" placeholder="หัวข้อประกาศ">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>ประกาศเพื่อ</label>
+                        <select th:field="*{annouceTo}" class="custom-select">
+                            <option value="">--เลือก--</option>
+                            <option value="ขาย">ขาย</option>
+                            <option value="ให้เช่า">ให้เช่า</option>
+                            <option value="ขายดาวน์">ขายดาวน์</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>ประเภท</label>
+                        <select th:field="*{assetTye}" class="custom-select">
+                            <option value="">--เลือก--</option>
+                            <option value="ที่ดิน">ที่ดิน</option>
+                            <option value="คอลโดมิเนียม">คอลโดมิเนียม</option>
+                            <option value="บ้าน">บ้าน</option>
+                            <option value="อพาร์เมนท์/โรงแรม">อพาร์เมนท์/โรงแรม</option>
+                            <option value="อาคารพาณิชย์/สำนักงาน">อาคารพาณิชย์/สำนักงาน</option>
+                            <option value="โรงงาน/โกดัง">โรงงาน/โกดัง</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>ราคา</label>
+                        <input th:field="*{assetPrice}" type="text" class="form-control" placeholder="ราคา">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label>ขนาดที่ดิน</label>
+                        <input th:field="*{rai}" type="text" class="form-control" placeholder="ไร่">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label class="text-white">1</label>
+                        <input th:field="*{ngan}" type="text" class="form-control" placeholder="งาน">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label class="text-white">1</label>
+                        <input th:field="*{taranwa}" type="text" class="form-control" placeholder="ตารางวา">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>ถนน</label>
+                        <input th:field="*{road}" type="text" class="form-control" placeholder="ถนน">
+                    </div>
+                    <div class="form-group col">
+                        <label>ซอย</label>
+                        <input th:field="*{alley}" type="text" class="form-control" placeholder="ซอย">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>ภาค</label>
+                        <select th:field="*{park}" class="custom-select">
+                            <option value="">--เลือก--</option>
+                            <option value="ภาคเหนือ">ภาคเหนือ</option>
+                            <option value="ภาคใต้">ภาคใต้</option>
+                            <option value="ภาคกลาง">ภาคกลาง</option>
+                            <option value="ภาคตะวันตก">ภาคตะวันตก</option>
+                            <option value="ภาคตะวันออก">ภาคตะวันออก</option>
+                            <option value="ภาคตะวันออกเฉียงเหนือ">ภาคตะวันออกเฉียงเหนือ</option>
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label>จังหวัด</label>
+                        <select th:field="*{cangwat}" class="custom-select">
+                            <option value="">--เลือก--</option>
+                            <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                            <option value="กระบี่">กระบี่</option>
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label>อำเภอ/เขต</label>
+                        <select th:field="*{ampor}" class="custom-select">
+                            <option value="">--เลือก--</option>
+                            <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                            <option value="คลองท่อม">คลองท่อม</option>
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label>ตำบล/แขวง</label>
+                        <select th:field="*{tambun}" class="custom-select">
+                            <option value="">--เลือก--</option>
+                            <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+                            <option value="คลองท่อมเหนือ">คลองท่อมเหนือ</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>ระบุตำแหน่ง</label>
+                        <input th:field="*{mLat}" type="text" class="form-control " placeholder="mLat">
+                    </div>
+                    <div class="form-group col">
+                        <label class="text-white">1</label>
+                        <input th:field="*{mLng}" type="text" class="form-control " placeholder="mLng">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>คำอธิบาย</label>
+                    <textarea th:field="*{description}" class="form-control" rows="3" placeholder="คำอธิบาย"></textarea>
+                </div>
+                <!--<div class="form-group">-->
+                    <!--<div class="form-check">-->
+                        <!--<input class="form-check-input" type="checkbox" id="gridCheck">-->
+                        <!--<label class="form-check-label" for="gridCheck">-->
+                            <!--Check me out-->
+                        <!--</label>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

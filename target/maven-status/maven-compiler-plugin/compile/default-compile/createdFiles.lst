@@ -1,0 +1,17 @@
+com\cupcodeteam\agentclubs\controller\AssetController.class
+com\cupcodeteam\agentclubs\service\webBangkokassets\BangkokassetsUser.class
+com\cupcodeteam\agentclubs\service\webDdProporty\DdproportyUser.class
+com\cupcodeteam\agentclubs\service\webTeedin108\Teedin108User.class
+com\cupcodeteam\agentclubs\repository\UserRepository.class
+com\cupcodeteam\agentclubs\entity\RegisterUserResponse.class
+com\cupcodeteam\agentclubs\entity\User.class
+com\cupcodeteam\agentclubs\service\webPrakardproperty\PrakardpropertyUser.class
+com\cupcodeteam\agentclubs\controller\UserController.class
+com\cupcodeteam\agentclubs\service\webTeedin108\Teedin108Asset.class
+com\cupcodeteam\agentclubs\service\webDdTeedin\DdteedinAsset.class
+com\cupcodeteam\agentclubs\Application.class
+com\cupcodeteam\agentclubs\entity\RegisterUserResult.class
+com\cupcodeteam\agentclubs\controller\TestFormAssetController.class
+com\cupcodeteam\agentclubs\service\webBaanfinder\BaanfinderUser.class
+com\cupcodeteam\agentclubs\service\webDdTeedin\DdteedinUser.class
+com\cupcodeteam\agentclubs\service\webPrakardproperty\prakardpropertyAsset.class
