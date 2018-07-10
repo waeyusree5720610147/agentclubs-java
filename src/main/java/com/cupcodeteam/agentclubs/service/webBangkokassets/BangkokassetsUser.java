@@ -13,6 +13,7 @@ import java.io.IOException;
 public class BangkokassetsUser {
     final WebClient webClient = new WebClient(BrowserVersion.CHROME);
     public boolean registerUser(){
+
         try {
             HtmlPage page1 = webClient.getPage("http://www.bangkokassets.com/register.html");
 
@@ -63,6 +64,6 @@ public class BangkokassetsUser {
             e.printStackTrace();
 
         }
-        return Boolean.parseBoolean(null);
+        return false;
     }
 }

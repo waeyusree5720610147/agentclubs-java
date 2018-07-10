@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.List;
 
-import static com.cupcodeteam.agentclubs.controller.AssetController.sleep;
+import static com.cupcodeteam.agentclubs.controller.admin.AssetController.sleep;
 
 @Service
 public class DdteedinAsset {

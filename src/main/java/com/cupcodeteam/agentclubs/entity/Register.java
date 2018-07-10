@@ -3,13 +3,14 @@ package com.cupcodeteam.agentclubs.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "register")
+public class Register {
     private Integer id;
     private String email;
-    private String name ;
-    private String sername;
-    private String pass ;
+    private String name;
+    private String lastName;
+    private String password;
+    private String confermPassword;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,22 +44,32 @@ public class User {
     }
 
     @Basic
-    @Column(name = "sername")
-    public String getSername() {
-        return sername;
+    @Column(name = "last_name")
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setSername(String sername) {
-        this.sername = sername;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Basic
     @Column(name = "password")
-    public String getPass() {
-        return pass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Basic
+    @Column(name = "conferm_password")
+    public String getConfermPassword() {
+        return confermPassword;
+    }
+
+    public void setConfermPassword(String confermPassword) {
+        this.confermPassword = confermPassword;
     }
 }

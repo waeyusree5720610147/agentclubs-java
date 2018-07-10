@@ -1,6 +1,6 @@
 package com.cupcodeteam.agentclubs.service.webTeedin108;
 
-import com.cupcodeteam.agentclubs.entity.User;
+import com.cupcodeteam.agentclubs.entity.Register;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
@@ -52,7 +52,7 @@ public class Teedin108User {
         return Boolean.parseBoolean(null);
     }
 
-    public boolean registerUser(User user) {
+    public boolean registerUser(Register register) {
         try {
             HtmlPage page1 = webClient.getPage("https://www.teedin108.com/member/register/");
 //            System.out.println(page1);

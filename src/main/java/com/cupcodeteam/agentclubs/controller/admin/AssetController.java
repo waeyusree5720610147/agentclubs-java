@@ -1,7 +1,7 @@
-package com.cupcodeteam.agentclubs.controller;
+package com.cupcodeteam.agentclubs.controller.admin;
 
-import com.cupcodeteam.agentclubs.entity.AssetPost;
-import com.cupcodeteam.agentclubs.repository.AssetPostRepository;
+import com.cupcodeteam.agentclubs.entity.TestAssetPost;
+import com.cupcodeteam.agentclubs.repository.TestAssetPostRepository;
 import com.cupcodeteam.agentclubs.service.webDdTeedin.DdteedinAsset;
 import com.cupcodeteam.agentclubs.service.webPrakardproperty.PrakardpropertyAsset;
 import com.cupcodeteam.agentclubs.service.webTeedin108.Teedin108Asset;
@@ -23,7 +23,7 @@ public class AssetController {
 
     //---------
     @Autowired
-    AssetPostRepository assetPostRepository;
+    TestAssetPostRepository testAssetPostRepository;
 
     //---------
     private boolean result_Ddteedin_AP;
@@ -34,13 +34,13 @@ public class AssetController {
     @RequestMapping(value = "/assetpost" ,method = RequestMethod.POST)
 //    @RequestMapping("/assetpost")
     public @ResponseBody void postAsset(
-            AssetPost assetPost
+            TestAssetPost testAssetPost
     ){
 
 //        assetPostRepository.save(assetPost);
-//        result_Ddteedin_AP = this.ddteedinAsset.assetPost_ddteedin(assetPost);
-//        result_Teedin108_AP = this.teedin108Asset.assetPost_teedin108(assetPost);
-        result_prakardproperty_AP = this.prakardpropertyAsset.assetPost_prakardproperty(assetPost);
+//        result_Ddteedin_AP = this.ddteedinAsset.assetPost_ddteedin(testAssetPost);
+//        result_Teedin108_AP = this.teedin108Asset.assetPost_teedin108(testAssetPost);
+        result_prakardproperty_AP = this.prakardpropertyAsset.assetPost_prakardproperty(testAssetPost);
 
         System.out.println("Ddteedin = " + result_Ddteedin_AP);
         System.out.println("Teedin108 = " + result_Teedin108_AP);

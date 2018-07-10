@@ -1,7 +1,7 @@
-package com.cupcodeteam.agentclubs.controller;
+package com.cupcodeteam.agentclubs.controller.admin;
 
-import com.cupcodeteam.agentclubs.entity.User;
-import com.cupcodeteam.agentclubs.repository.UserRepository;
+import com.cupcodeteam.agentclubs.entity.Register;
+import com.cupcodeteam.agentclubs.repository.RegisterRepository;
 import com.cupcodeteam.agentclubs.service.webDdTeedin.DdteedinUser;
 import com.cupcodeteam.agentclubs.service.webPrakardproperty.PrakardpropertyUser;
 import com.cupcodeteam.agentclubs.service.webTeedin108.Teedin108User;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class RegisterController {
 
     @Autowired
-    private UserRepository userRepository;
+    private RegisterRepository registerRepository;
     @Autowired
     private DdteedinUser ddteedinUser;
     @Autowired
@@ -32,10 +32,10 @@ public class UserController {
     @RequestMapping("/register")
 //    public @ResponseBody List<User> member(Model model){
 //    public RegisterUserResponse register(User user, Model model){
-    public void register(User user, Model model){
-        result_Ddteedin = this.ddteedinUser.registerUser(user);
-        result_Teedin108 = this.teedin108User.registerUser(user);
-        result_prakardproperty = this.prakardpropertyUser.registerUser(user);
+    public void register(Register register, Model model){
+        result_Ddteedin = this.ddteedinUser.registerUser(register);
+        result_Teedin108 = this.teedin108User.registerUser(register);
+        result_prakardproperty = this.prakardpropertyUser.registerUser(register);
 //        ddproportyUser.addUser(user);  ---Security---
 
 

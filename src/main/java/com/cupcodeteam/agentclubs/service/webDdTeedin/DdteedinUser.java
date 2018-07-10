@@ -1,6 +1,6 @@
 package com.cupcodeteam.agentclubs.service.webDdTeedin;
 
-import com.cupcodeteam.agentclubs.entity.User;
+import com.cupcodeteam.agentclubs.entity.Register;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
@@ -59,7 +59,7 @@ public class DdteedinUser {
         return Boolean.parseBoolean(null);
     }
 
-    public boolean registerUser(User user){
+    public boolean registerUser(Register register){
 //        final WebClient webClient = new WebClient(BrowserVersion.CHROME);
 //        final HtmlPage page;
         try {

@@ -1,6 +1,6 @@
 package com.cupcodeteam.agentclubs.service.webPrakardproperty;
 
-import com.cupcodeteam.agentclubs.entity.User;
+import com.cupcodeteam.agentclubs.entity.Register;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
@@ -43,7 +43,7 @@ public class PrakardpropertyUser {
         return false;
     }
 
-    public boolean registerUser(User user) {
+    public boolean registerUser(Register register) {
         try {
             HtmlPage page1 = webClient.getPage("http://www.prakardproperty.com/register");
             HtmlForm form1 = page1.getFormByName("frmRegister");

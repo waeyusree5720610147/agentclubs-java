@@ -1,4 +1,4 @@
-package com.cupcodeteam.agentclubs.controller;
+package com.cupcodeteam.agentclubs.controller.admin;
 
 import com.cupcodeteam.agentclubs.entity.AssetPost;
 import org.springframework.stereotype.Controller;

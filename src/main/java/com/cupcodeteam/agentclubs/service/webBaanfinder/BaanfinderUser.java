@@ -10,7 +10,7 @@ import java.io.IOException;
 @Service
 public class BaanfinderUser {
     final WebClient webClient = new WebClient(BrowserVersion.CHROME);
-    private boolean result;
+
     public boolean loginUser(){
         try {
             HtmlPage page1 = webClient.getPage("https://www.baanfinder.com/login");
@@ -30,16 +30,14 @@ public class BaanfinderUser {
             HtmlElement img_Success = page2.getFirstByXPath("//img[@class='photo  img-responsive']");
 
             if (img_Success != null) {
-                result = true;
-                return result;
+                return true;
             } else {
-                result = false;
-                return result;
+                return false;
             }
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return Boolean.parseBoolean(null);
+        return false;
     }
 }

@@ -1,14 +1,13 @@
 package com.cupcodeteam.agentclubs.service.webDdProporty;
 
-import com.cupcodeteam.agentclubs.entity.User;
+import com.cupcodeteam.agentclubs.entity.Register;
 import org.springframework.stereotype.Service;
 
 //import org.openqa.selenium.firefox.FirefoxDriver;
 
 @Service
 public class DdproportyUser {
-    public void addUser(User user) {
-        if (user != null) {
+    public void addUser(Register register) {
 
 //            WebDriver driver = new FirefoxDriver();
 ////            driver.manage().window().maximize();  full screen browser
@@ -27,7 +26,6 @@ public class DdproportyUser {
 
 
 //            driver.findElement(By.id("REGISTER")).click();
-//------------------------------
-        }
+//-----------------------------
     }
 }
