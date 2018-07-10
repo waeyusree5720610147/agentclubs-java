@@ -1,7 +1,7 @@
 package com.cupcodeteam.agentclubs.service.webTeedin108;
 
 
-import com.cupcodeteam.agentclubs.entity.AssetPost;
+import com.cupcodeteam.agentclubs.entity.TestAssetPost;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
@@ -14,7 +14,7 @@ import java.util.List;
 public class Teedin108Asset {
     WebClient webClient = new WebClient(BrowserVersion.CHROME);
 
-    public boolean assetPost_teedin108(AssetPost assetPost) {
+    public boolean assetPost_teedin108(TestAssetPost testAssetPost) {
         try {
             //-----Login
             HtmlPage page1 = webClient.getPage("https://www.teedin108.com/member/login/");

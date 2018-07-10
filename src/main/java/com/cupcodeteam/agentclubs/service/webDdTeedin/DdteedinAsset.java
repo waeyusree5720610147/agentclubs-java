@@ -1,6 +1,6 @@
 package com.cupcodeteam.agentclubs.service.webDdTeedin;
 
-import com.cupcodeteam.agentclubs.entity.AssetPost;
+import com.cupcodeteam.agentclubs.entity.TestAssetPost;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
@@ -17,7 +17,7 @@ public class DdteedinAsset {
 //    DdteedinUser ddteedinUser;
 
     WebClient webClient = new WebClient(BrowserVersion.CHROME);
-    public Boolean assetPost_ddteedin(AssetPost assetPost){
+    public Boolean assetPost_ddteedin(TestAssetPost testAssetPost){
         try {
 //--------LogIn----------
 //            ddteedinUser.loginUser();

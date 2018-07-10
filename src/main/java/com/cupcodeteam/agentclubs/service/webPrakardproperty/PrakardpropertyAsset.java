@@ -1,6 +1,6 @@
 package com.cupcodeteam.agentclubs.service.webPrakardproperty;
 
-import com.cupcodeteam.agentclubs.entity.AssetPost;
+import com.cupcodeteam.agentclubs.entity.TestAssetPost;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
@@ -15,7 +15,7 @@ public class PrakardpropertyAsset {
     private boolean result;
     WebClient webClient = new WebClient(BrowserVersion.CHROME);
 
-    public boolean assetPost_prakardproperty(AssetPost assetPost) {
+    public boolean assetPost_prakardproperty(TestAssetPost testAssetPost) {
         // ประกาศชื่อซำ้ได้
         try {
             // Login
@@ -82,30 +82,30 @@ public class PrakardpropertyAsset {
 //            AssetPost assetPost1 = new AssetPost();
 //            assetPost1.getAssetName();
 
-            String title = assetPost.getAssetName();
+            String title = testAssetPost.getAssetName();
 
             System.out.println(title);
 
             propertyTitle.type(title);
 //System.out.println(propertyTitle);
-            propertyType.getOptionByText(assetPost.getAssetTye()).setSelected(true);
-            propertyPostType.getOptionByText(assetPost.getAnnouceTo()).setSelected(true);
+            propertyType.getOptionByText(testAssetPost.getAssetTye()).setSelected(true);
+            propertyPostType.getOptionByText(testAssetPost.getAnnouceTo()).setSelected(true);
 
             propertySellPrice.type("200000");
             propertyUnitType1.getOptionByText("บาท").setSelected(true);
 
-            propertyLandSizeRai.type(assetPost.getRai());
-            propertyLandSizeNgan.type(assetPost.getNgan());
-            propertyLandSizeWah.type(assetPost.getTaranwa());
+            propertyLandSizeRai.type(testAssetPost.getRai());
+            propertyLandSizeNgan.type(testAssetPost.getNgan());
+            propertyLandSizeWah.type(testAssetPost.getTaranwa());
 
-            province.getOptionByText(assetPost.getCangwat()).setSelected(true);
+            province.getOptionByText(testAssetPost.getCangwat()).setSelected(true);
             sleep();
-            district.getOptionByText(assetPost.getAmpor()).setSelected(true);
+            district.getOptionByText(testAssetPost.getAmpor()).setSelected(true);
             sleep();
-            subdistrict.getOptionByText(assetPost.getTambun()).setSelected(true);
+            subdistrict.getOptionByText(testAssetPost.getTambun()).setSelected(true);
 
-            lat.setAttribute("value", assetPost.getmLat());
-            lng.setAttribute("value", assetPost.getmLng());
+            lat.setAttribute("value", testAssetPost.getmLat());
+            lng.setAttribute("value", testAssetPost.getmLng());
 
             propertyConfirm1.setChecked(true);
 
