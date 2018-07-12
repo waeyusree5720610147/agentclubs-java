@@ -10,7 +10,7 @@ public class AssetPost {
     private String assetType;
     private String assetName;
     private String assetPrice;
-    private String areaOfAsset;
+    private String sizeAreaOfAsset;
     private String assetImage;
     private String detailsOfAsset;
     private String assetArea;
@@ -68,13 +68,13 @@ public class AssetPost {
     }
 
     @Basic
-    @Column(name = "area_of_asset")
-    public String getAreaOfAsset() {
-        return areaOfAsset;
+    @Column(name = "size_area_of_asset")
+    public String getSizeAreaOfAsset() {
+        return sizeAreaOfAsset;
     }
 
-    public void setAreaOfAsset(String areaOfAsset) {
-        this.areaOfAsset = areaOfAsset;
+    public void setSizeAreaOfAsset(String sizeAreaOfAsset) {
+        this.sizeAreaOfAsset = sizeAreaOfAsset;
     }
 
     @Basic
